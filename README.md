@@ -1,2 +1,2 @@
-CM10.2 device tree for HTC Desire X
-===================================
+android-4.4 device tree [WIP]
+==============================

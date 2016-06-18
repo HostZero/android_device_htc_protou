@@ -41,8 +41,7 @@ TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
 # Kernel
-TARGET_PREBIULT_KERNEL := device/htc/protou/prebuilt/kernel.gz
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
+TARGET_PREBUILT_KERNEL := device/htc/protou/prebuilt/kernel.gz
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
 BOARD_KERNEL_BASE := 0x03200000
 BOARD_KERNEL_PAGE_SIZE := 2048

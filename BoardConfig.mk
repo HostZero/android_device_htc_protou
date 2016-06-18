@@ -13,9 +13,6 @@
 # limitations under the License.
 #
 
-# inherit from the proprietary version
--include vendor/htc/protou/BoardConfigVendor.mk
-
 USE_CAMERA_STUB := true
 BOARD_VENDOR := htc
 
@@ -44,8 +41,9 @@ TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/htc/protou
-TARGET_KERNEL_CONFIG := atis112_defconfig
+TARGET_PREBULT_KERNEL := device/htc/protou/prebuilt/kernel.gz
+TARGET_KERNEL_SOURCE := 
+TARGET_KERNEL_CONFIG := 
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
 BOARD_KERNEL_BASE := 0x03200000
@@ -165,3 +163,13 @@ TARGET_PROVIDES_POWERHAL := true
 # FM Radio
 #BOARD_HAVE_QCOM_FM := true
 #COMMON_GLOBAL_CFLAGS += -DQCOM_FM_ENABLED
+
+# TWRP stuff
+TW_THEME := portrait_mdpi
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TW_NEVER_UMOUNT_SYSTEM := false
+TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
+TARGET_RECOVERY_INITRC := device/htc/protou/ramdisk/recovery/init.rc
+TARGET_USERIMAGES_USES_F2FS := true
+TARGET_USERIMAGES_USES_EXT4 := false
+TW_NO_EXFAT := true
